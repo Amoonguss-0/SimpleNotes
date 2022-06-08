@@ -47,7 +47,6 @@ class NewNoteFragment : Fragment() {
         fun saveNote(){
             val title = view.findViewById<EditText>(R.id.et_Title)
             val description = view.findViewById<EditText>(R.id.et_Desc)
-
             if (title.text.isNullOrEmpty()){
                 Toast.makeText(context, "Title Required",Toast.LENGTH_SHORT).show()
             }
