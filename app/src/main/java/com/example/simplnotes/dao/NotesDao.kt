@@ -6,7 +6,7 @@ import com.example.simplnotes.entities.Notes
 @Dao
 interface NotesDao {
     @get:Query("SELECT * FROM notes ORDER BY id DESC")
-    val allNotes: List<Notes>
+    val allNotes: ArrayList<Notes>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertNotes(note:Notes)

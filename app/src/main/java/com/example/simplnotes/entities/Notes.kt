@@ -6,17 +6,18 @@ import androidx.room.PrimaryKey
 import java.io.Serializable
 
 @Entity(tableName = "Notes")
-data class Notes (
+class Notes: Serializable {
 
     @PrimaryKey(autoGenerate = true)
-    var id:Int,
+    var id: Int? = null
 
     @ColumnInfo(name = "title")
-    var title:String,
+    var title: String? = null
 
     @ColumnInfo(name = "description")
-    var description:String
-    ):Serializable {override fun toString():String{
+    var description: String? = null
+
+    override fun toString():String{
         return "$title"
     }
 }

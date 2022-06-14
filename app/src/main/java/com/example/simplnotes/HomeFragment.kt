@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.RecyclerView
 
 class HomeFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,6 +36,8 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val newNote = view.findViewById<Button>(R.id.btn_newNote)
+        val notePage = view.findViewById<RecyclerView>(R.id.rv1)
+
         newNote.setOnClickListener{
             findNavController().navigate(R.id.action_homeFragment_to_fragmentNoteNew)
         }
